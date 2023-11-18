@@ -1,22 +1,15 @@
-import "./students.css"
+import Student from "./student/student";
 
-const Students = () => {
-    return (
-        <div className="students">
-            <label>شماره دانش آموزی : 1</label>
-            <label>نام و نام خانوادگی</label>
-            <input type="text" />
-
-            <label>کلاس</label>
-            <input type="text" />
-
-            <label>شماره تلفن</label>
-            <input type="number" />
-
-            <label>ایمیل</label>
-            <input type="email" />
-        </div>
-    );
+const Students = (props) => {
+    return props.studentsList.map((student, index) => (
+        <Student
+            key={index}
+            id={student.id}
+            name={student.name}
+            classNumber={student.classNumber}
+            phoneNumber={student.phoneNumber}
+            email={student.email}
+        />
+    ));
 };
-
 export default Students;
