@@ -1,9 +1,10 @@
 import "./App.css";
+import Students from "./components/students/students";
 
 function App() {
     return (
         <div className="App">
-            <h1>Welcome to learn React JS</h1>
+            <Students />
         </div>
     );
 }
